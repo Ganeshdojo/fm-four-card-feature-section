@@ -1,0 +1,130 @@
+:root{
+    /* Primary colors */
+
+    --clr-primary-red: hsl(0, 78%, 62%);
+    --clr-primary-cyan: hsl(180, 62%, 55%);
+    --clr-primary-orange: hsl(34, 97%, 64%);
+    --clr-primary-blue: hsl(212, 86%, 64%);
+
+    /* neutral colors */
+
+    --clr-neutral-dark-blue: hsl(234, 12%, 34%);
+    --clr-neutral-grayish-blue: hsl(229, 6%, 66%);
+    --clr-neutral-gray: hsl(0, 0%, 98%);
+
+    --fsize: 0.938rem;
+
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw600: 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.container{
+    padding-top: 40px;
+    text-align: center;
+    color: var(--clr-neutral-grayish-blue);
+    width: 90%;
+    margin: auto;
+}
+
+.header{
+    width: 90%;
+    margin: 0 auto 60px;
+}
+
+.container h1:nth-child(1){
+    font-weight: var(--fw-200);
+}
+
+.container h1:nth-child(2){
+    color: var(--clr-neutral-dark-blue);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 30px;
+}
+
+.card{
+    padding: 15px;
+    text-align: left;
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 255, .2);
+    border-radius: 8px;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 30%;
+}
+
+.card:nth-child(1),
+.card:nth-child(3){
+    align-self: center;
+}
+
+.card1{
+    border-top: 5px solid var(--clr-primary-cyan);
+    flex-basis: 30%;
+}
+
+.card2{
+    border-top: 5px solid var(--clr-primary-red);
+}
+
+.card3{
+    border-top: 5px solid var(--clr-primary-orange);
+}
+
+.card4{
+    border-top: 5px solid var(--clr-primary-blue);
+    flex-basis: 30%;
+}
+
+.card h3{
+    color: var(--clr-neutral-dark-blue);
+}
+.card p{
+    width: 80%;
+    padding: 10px 0px 10px;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+    padding: 0px 20px 20px;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (max-width: 768px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(3){
+        align-self: stretch;
+    }
+}
